@@ -9,11 +9,8 @@ export class UserComponent implements OnInit {
   name:string = 'yoxua';
   age:number = 30;
   email:string;
-  address:{
-    street:string,
-    state:string,
-    city:string
-  }
+  address:Address;
+  hobbies:string[];s
   
   constructor() {
     console.log('Constructor corriendo...')
@@ -27,8 +24,15 @@ export class UserComponent implements OnInit {
       street:'8 mile',
       state:'Míchigan',
       city:'Detroit'
-    }
-    this.email='joshuansu0897@gmail.com'
+    };
+    this.email='joshuansu0897@gmail.com';
+    this.hobbies=['Music','Video Games','Write Code','Sleep','Eat','School'];
   }
 
+}
+
+interface Address{
+  street:string,
+  state:string,
+  city:string
 }

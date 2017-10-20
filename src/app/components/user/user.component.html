@@ -1,9 +1,14 @@
 <h1>Hola Usuario {{name}}</h1>
-<h2>Datos</h2>
-<div>
+<h3>Datos</h3>
+<ul>
   <li>Correo Electronico: {{email}}</li>
   <li>Edad: {{age}}</li>
   <li>Estado: {{address.state}}</li>
   <li>Ciudad: {{address.city}}</li>
   <li>Calle: {{address.street}}</li>
-</div>
+</ul>
+
+<h3>Hobbies</h3>
+<ul>
+  <li *ngFor="let hobbie of hobbies">{{hobbie}}</li>
+</ul>
