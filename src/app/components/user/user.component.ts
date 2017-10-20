@@ -29,6 +29,28 @@ export class UserComponent implements OnInit {
     this.hobbies=['Music','Video Games','Write Code','Sleep','Eat','School'];
   }
 
+  onClick(){
+    if(this.name=="Joshua"){
+     this.name="Eminem";
+    }else{
+      this.name="Joshua"
+    }
+  }
+
+  addHobby(hobby:string){
+    this.hobbies.push(hobby)
+
+    //esto es para que no recarge la pagina y no pierda el dato introducido
+    return false;
+  }
+
+  deleteHobby(index:number){
+    this.hobbies.splice(index,1)
+
+    //esto es para que no recarge la pagina y no pierda el dato introducido
+    //return false;
+  }
+
 }
 
 interface Address{

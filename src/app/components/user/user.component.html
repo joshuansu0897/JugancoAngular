@@ -8,7 +8,17 @@
   <li>Calle: {{address.street}}</li>
 </ul>
 
+<button (click)="onClick()">Cambiar Nombre</button>
+
 <h3>Hobbies</h3>
+<form (submit)="addHobby(hobby.value)">
+  <div>
+    <label for="hobby">Hobby:</label>
+    <input type="text" #hobby>
+  </div>
+</form>
 <ul>
-  <li *ngFor="let hobbie of hobbies; let i=index">{{i+1}}: {{hobbie}}</li>
+  <li *ngFor="let hobby of hobbies; let i=index">
+    {{i+1}}: {{hobby}} <button (click)="deleteHobby(i)">Borrar</button>
+  </li>
 </ul>
