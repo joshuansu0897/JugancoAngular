@@ -10,5 +10,5 @@
 
 <h3>Hobbies</h3>
 <ul>
-  <li *ngFor="let hobbie of hobbies">{{hobbie}}</li>
+  <li *ngFor="let hobbie of hobbies; let i=index">{{i+1}}: {{hobbie}}</li>
 </ul>
