@@ -10,11 +10,11 @@ export class UserComponent implements OnInit {
   age:number = 30;
   email:string;
   address:Address;
-  hobbies:string[];s
+  hobbies:string[];
   
   constructor() {
     console.log('Constructor corriendo...')
-   }
+  }
 
   ngOnInit() {
     console.log('ngOnInit corriendo...')
