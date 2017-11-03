@@ -10,7 +10,8 @@ export class UserComponent implements OnInit {
   age:number = 30;
   email:string;
   address:Address;
-  hobbies:string[];
+  hobbies:string[];  
+  isEdit:boolean = false;
   
   constructor() {
     console.log('Constructor corriendo...')
@@ -49,6 +50,10 @@ export class UserComponent implements OnInit {
 
     //esto es para que no recarge la pagina y no pierda el dato introducido
     //return false;
+  }
+
+  toggleEdit(){
+    this.isEdit = !this.isEdit;
   }
 
 }

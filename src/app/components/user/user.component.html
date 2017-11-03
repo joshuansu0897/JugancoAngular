@@ -7,8 +7,38 @@
   <li>Ciudad: {{address.city}}</li>
   <li>Calle: {{address.street}}</li>
 </ul>
-
 <button (click)="onClick()">Cambiar Nombre</button>
+
+<button (click)="toggleEdit()">Editar Usuario</button>
+<div *ngIf=isEdit>
+  <h1>Editar Usuario</h1>
+  <form>
+    <div>
+      <label for="name">Nombre: </label><br>
+      <input type="text" [(ngModel)]="name" name="name">
+    </div>
+    <div>
+      <label for="age">Edad: </label><br>
+      <input type="number" [(ngModel)]="age" name="age">
+    </div>
+    <div>
+      <label for="email">Email: </label><br>
+      <input type="text" [(ngModel)]="email" name="email">
+    </div>
+    <div>
+      <label for="street">Calle: </label><br>
+      <input type="text" [(ngModel)]="address.street" name="street">
+    </div>
+    <div>
+      <label for="city">Ciudad: </label><br>
+      <input type="text" [(ngModel)]="address.city" name="city">
+    </div>
+    <div>
+      <label for="state">Estado: </label><br>
+      <input type="text" [(ngModel)]="address.state" name="state">
+    </div>
+  </form>
+</div>
 
 <h3>Hobbies</h3>
 <form (submit)="addHobby(hobby.value)">
